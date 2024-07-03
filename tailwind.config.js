@@ -47,9 +47,15 @@ export default {
       fontFamily: {
         sans: ['Sofia Pro', 'sans-serif']
       },
+      fontSize: {
+        DEFAULT: '18px'
+      },
       borderRadius: {
         DEFAULT: '8px'
       },
+      width: {
+        page: '1440px' // handle extra large screens
+      }
     },
   },
   plugins: []
