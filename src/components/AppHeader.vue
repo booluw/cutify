@@ -2,7 +2,7 @@
 import AppButton from './AppButton.vue';
 </script>
 <template>
-  <header class="bg-white flex items-center justify-center">
+  <header class="bg-white flex items-center justify-center !z-[99]">
     <div class="flex items-center justify-between px-[20px] py-[13px] md:px-[120px] md:py-[19.73px] w-full 2xl:w-[1400px]">
       <router-link to="/">
         <img src="@/assets/logo.png" alt="Cutify logo" class=" w-[44px] md:w-[84px] h-auto" />
@@ -10,7 +10,7 @@ import AppButton from './AppButton.vue';
 
       <input type="checkbox" id="nav" class="hidden" />
 
-      <nav class="hidden md:flex gap-[32px] items-center">
+      <nav class="hidden md:flex gap-[32px] items-center !z-[99]">
         <ul class="flex flex-col md:flex-row gap-[24px] w-full md:w-auto md:items-center">
           <li class="">
             <router-link
@@ -65,7 +65,7 @@ import AppButton from './AppButton.vue';
               Create account
             </AppButton>
           </router-link>
-          <router-link to="/log-in">
+          <router-link to="/login">
             <AppButton type="solid" size="medium">
               Login
             </AppButton>

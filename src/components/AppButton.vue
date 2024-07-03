@@ -35,7 +35,7 @@ const btnStyle = computed(() => {
 
 </script>
 <template>
-  <button class="flex items-center justify-between rounded" :class="btnStyle" :type="mode ?? 'button'">
+  <button class="flex items-center justify-center rounded disabled:opacity-45 disabled:cursor-not-allowed" :class="btnStyle" :type="mode ?? 'button'">
     <slot></slot>
   </button>
 </template>

@@ -2,5 +2,7 @@
 </script>
 
 <template>
-  <RouterView />
+  <section class="text-grey">
+    <RouterView />
+  </section>
 </template>
