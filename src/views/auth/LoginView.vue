@@ -19,6 +19,7 @@ const auth = reactive({
       <h1 class="font-bold text-[32px] md:text-[40px]">Welcome Back</h1>
       <p class="text-[18px]">Enter your details to login to your account.</p>
     </div>
+    
     <div class="flex gap-[48px] justify-center">
       <a
         href="#"

@@ -3,8 +3,9 @@ import { computed, ref, type Ref } from 'vue'
 import { validation } from './validation'
 
 const props = defineProps<{
-  type: 'text' | 'password' | 'email'
+  type: 'text' | 'password' | 'email' | 'tel'
   placeholder: string
+  regex?: string
   rules?: string
   'same-as'?: string // for confirm password
   required?: boolean
@@ -30,10 +31,22 @@ const updateModel = function (e: any) {
   error.value.message = ''
   error.value.show = false
 
-  // first validate same-as, as it's most important
+  // First validates regex
+  if (props.regex) {
+    const isValid = new RegExp(props.regex).test(e.target.value)
 
-  if (props['same-as']) {
-    if (e.target.value !== props['same-as']) {
+    if (!isValid) {
+      error.value.show = true
+      error.value.message = `${props.placeholder} is not valid`
+
+      return
+    }
+  }
+
+  // then validate same-as
+
+  if (props!.sameAs!) {
+    if (e.target.value !== props!.sameAs!) {
       error.value.show = true
       error.value.message = 'Validation error'
     }

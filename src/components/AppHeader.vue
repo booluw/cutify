@@ -2,7 +2,7 @@
 import AppButton from './AppButton.vue';
 </script>
 <template>
-  <header class="bg-white flex items-center justify-center !z-[99]">
+  <header class="bg-white flex items-center justify-center !z-[99] sticky top-0 md:relative">
     <div class="flex items-center justify-between px-[20px] py-[13px] md:px-[120px] md:py-[19.73px] w-full 2xl:w-[1400px]">
       <router-link to="/">
         <img src="@/assets/logo.png" alt="Cutify logo" class=" w-[44px] md:w-[84px] h-auto" />
