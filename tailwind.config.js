@@ -56,7 +56,7 @@ export default {
       width: {
         page: '1440px' // handle extra large screens
       }
-    },
+    }
   },
-  plugins: []
+  plugins: [require('tailwind-scrollbar')]
 }
