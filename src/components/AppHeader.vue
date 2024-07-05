@@ -1,5 +1,15 @@
 <script lang="ts" setup>
+import { ref, watch } from 'vue';
+import { useRoute } from 'vue-router'
+
 import AppButton from './AppButton.vue';
+
+const route = useRoute();
+const nav = ref(null)
+
+watch(route, () => {
+  nav.value!.checked! = false
+})
 </script>
 <template>
   <header class="bg-white flex items-center justify-center !z-[99] sticky top-0 md:relative">
@@ -8,7 +18,7 @@ import AppButton from './AppButton.vue';
         <img src="@/assets/logo.png" alt="Cutify logo" class=" w-[44px] md:w-[84px] h-auto" />
       </router-link>
 
-      <input type="checkbox" id="nav" class="hidden" />
+      <input type="checkbox" id="nav" class="hidden" ref="nav" />
 
       <nav class="hidden md:flex gap-[32px] items-center !z-[99]">
         <ul class="flex flex-col md:flex-row gap-[24px] w-full md:w-auto md:items-center">
