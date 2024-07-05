@@ -13,7 +13,7 @@ defineProps<{
 <template>
   <router-link
     :to="`/services/${service.id}`"
-    class="border-[0.5px] border-grey-100 rounded overflow-hidden group"
+    class="bg-[#F1E8DB]/10 border-[0.5px] border-grey-100 rounded overflow-hidden group"
   >
     <img :src="service.img" class="w-full h-auto" />
     <div class="p-4 text-grey flex flex-col gap-2">
@@ -43,7 +43,7 @@ defineProps<{
         </svg>
         <p class="text-grey-500">{{ service.location }}</p>
       </div>
-      <div class="flex items-center justify-between">
+      <div class="flex flex-wrap items-center justify-between">
         <div class="flex gap-2 items-center text-grey-500">
           <svg
             width="20"
@@ -58,7 +58,7 @@ defineProps<{
             />
           </svg>
           {{ service.rating }}
-          <span class="text-grey-400">{{ service.reviews }}</span>
+          <span class="text-grey-400 text-[14px]">{{ service.reviews }} reviews</span>
         </div>
         <svg
           class="transform group-hover:translate-x-2 transition-transform ease-in-out"
